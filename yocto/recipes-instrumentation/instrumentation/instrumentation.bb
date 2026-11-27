@@ -18,7 +18,7 @@ SRC_URI = "git://github.com/soccentric-vela/Vela-Instrumentation.git;protocol=ht
 # -- a release build must never silently float.
 # Held in its own variable: referencing SRCREV from inside SRCREV's own
 # expansion is self-referential and bitbake would recurse on it.
-INSTR_SRCREV ?= "35992507381bfb292b05bf034d05c6c6a04aad89"
+INSTR_SRCREV ?= "d36c92bc0583337c50feccd47588155ce094bb9e"
 SRCREV = "${@d.getVar('AUTOREV') if d.getVar('VELA_DEV_BUILD') == '1' else d.getVar('INSTR_SRCREV')}"
 # One version for the whole suite (REQ §2). This used to read PV from
 # S/VERSION via a python expression: PV -> S -> WORKDIR -> PV (WORKDIR's own
